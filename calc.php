@@ -6,6 +6,5 @@
            eval($t);
 			echo $n;            
     }
-    else echo "0";
     
 ?>
