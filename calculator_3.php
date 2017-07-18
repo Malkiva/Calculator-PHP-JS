@@ -39,29 +39,28 @@
 
     <script type="text/javascript">
         var box = document.getElementById('result');
-    function addtoscreen(x)
-        {
-            box.value +=x;
-            if(x==='C')
-            {
-                box.value='';
+
+        function addtoscreen(x) {
+            box.value += x;
+            if (x === 'C') {
+                box.value = '';
             }
-        }        
-
-        
-
-     $(document).ready(function(){
-        $('#eq').bind("click", function(){
-            var b = $('#result');
-           $.get( "http://localhost/calc.php?equal="+ encodeURIComponent(b.val()), function( data ){
-            $('#result').val(data);
-           });
+        }
 
 
-        });
+
+        $(document).ready(function() {
+            $('#eq').bind("click", function() {
+                var b = $('#result');
+                $.get("http://localhost/calc.php?equal=" + encodeURIComponent(b.val()), function(data) {
+                    $('#result').val(data);
+                });
 
 
-     })
+            });
+
+
+        })
     </script>
 
 </body>
